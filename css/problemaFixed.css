@@ -1,0 +1,9 @@
+@media (max-width: 991px) {
+	.fixed-top{
+		position: fixed!important;
+		right: 0px!important;
+		left: 0px!important;
+	}
+
+
+}
