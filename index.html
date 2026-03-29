@@ -1,1005 +1,627 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="Mattia Marcanti Sito Web" name="description">
-    <meta content="Mattia Marcanti | Sito Web Personale" name="keywords">
-    <meta name="author" content="Mattia Marcanti">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mattia Marcanti — Software Developer & Computer Engineer. Portfolio professionale con esperienze, progetti e contatti.">
+  <meta name="keywords" content="Mattia Marcanti, Software Developer, Computer Engineer, Java, Spring Boot, Bologna">
+  <meta property="og:title" content="Mattia Marcanti — Software Developer">
+  <meta property="og:description" content="Portfolio di Mattia Marcanti, Software Developer & Computer Engineer basato a Bologna.">
+  <meta property="og:type" content="website">
+  <title>Mattia Marcanti — Software Developer</title>
 
-    <!-- Favicons -->
-    <link rel="stylesheet" type="text/css" href="./css/stylemy.css"/>
-    <link href="./css/style2.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/animated.css">
-    <link rel="stylesheet" href="./css/templatemo-space-dynamic.css">
-    <link rel="stylesheet" href="./css/templatemo-training-studio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <link href="./css/bootstrap2.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="./css/problemaFixed.css"/>
-    <title>MATTIA MARCANTI</title>
-    <link rel="icon" href="https://www.mattiamarcanti.it/wp-content/uploads/2022/06/letter-m2.png" type="image/icon type">
-    <!--GOOGLE -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-230251591-1">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-        gtag('config', 'UA-230251591-1');
-    </script>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-230251591-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-230251591-1');
+  </script>
 </head>
+<body>
 
-
-
-<body style="background-color:white">
-
-<nav class="header-area header-sticky" id="navbarHeader" style="position:fixed">
-    <div class="container fixed-top" id="fixedDiv">
-        <div class="row" >
-            <div class="col-12">
-                <nav class="main-nav navbar-fixed-top fixed-top" style="transform: translate3d(0,0,0)!important;right: 40px; left:100px;">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo fixed-top" style="font-family:'Ubuntu';text-align: left;width:40px;">MM</a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a href="https://www.mattiamarcanti.it/app/"  style="font-family:'Ubuntu'">Web App</a></li>
-                        <li class="scroll-to-section"><a href="https://www.mattiamarcanti.it/menu/"  style="font-family:'Ubuntu'">Area Riservata</a></li>
-                        <li class="scroll-to-section"><a style="font-family:'Ubuntu';color:black;" class="btn" role="button" id="buttonCV">Download CV</a></li>
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
+  <!-- ── Loading Screen ─────────────────────── -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-logo">MM</span>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
     </div>
-</nav>
-<!-- ***** Header Area End ***** -->
-<!-- ***** Main Banner Area Start ***** -->
-<div class="main-banner" id="top">
-    <video autoplay muted loop id="bg-video">
-        <source src="https://www.mattiamarcanti.it/bigUpload/videointro1.mp4" type="video/mp4" />
-    </video>
+  </div>
 
-    <div class="video-overlay header-text" style="background-color:rgba(0,0,0,0.8)">
-        <div class="caption">
-            <h2 class="titleMM" style="font-family: 'Ubuntu'">MATTIA MARCANTI</h2>
-            <div class="main-button scroll-to-section">
-                <a class="linkedin" href="https://www.linkedin.com/in/mattiamarcanti/"><button type="button" class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
-                    </svg>
-                    Linkedin
-                </button></a>
-            </div>
+  <!-- ── Navbar ─────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#top" class="nav-logo" aria-label="Home">
+        <span class="logo-text">MM</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <button id="navClose" class="nav-close" aria-label="Chiudi menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <a href="#about"      class="nav-link" data-i18n="nav.about">Su di me</a>
+        <a href="#experience" class="nav-link" data-i18n="nav.experience">Esperienze</a>
+        <a href="#projects"   class="nav-link" data-i18n="nav.projects">Progetti</a>
+        <a href="#gallery"    class="nav-link" data-i18n="nav.gallery">Galleria</a>
+        <a href="#contact"    class="nav-link" data-i18n="nav.contact">Contatti</a>
+        <div class="nav-divider" aria-hidden="true"></div>
+        <a href="https://mattiamarcanti.it/app/" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-external">
+          <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i>
+          <span data-i18n="nav.webapp">Web App</span>
+        </a>
+        <a href="https://mattiamarcanti.it/menu/" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-external">
+          <i class="bi bi-lock" aria-hidden="true"></i>
+          <span data-i18n="nav.reserved">Area Riservata</span>
+        </a>
+        <button class="btn btn-primary btn-sm" id="downloadCV" data-i18n-aria="aria.downloadcv" aria-label="Scarica CV">
+          <i class="bi bi-download" aria-hidden="true"></i>
+          <span data-i18n="nav.curriculum">Curriculum</span>
+        </button>
+      </div>
+
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Cambia lingua">
+          <img class="lang-flag-img" id="langFlag" src="https://flagcdn.com/20x15/it.png" alt="IT" width="20" height="15">
+          <span class="lang-code" id="langCode">Italiano</span>
+          <i class="bi bi-chevron-down lang-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" role="menu">
+          <button class="lang-option active" data-lang="it" role="menuitem">
+            <img src="https://flagcdn.com/20x15/it.png" alt="" width="20" height="15">
+            Italiano
+          </button>
+          <button class="lang-option" data-lang="en" role="menuitem">
+            <img src="https://flagcdn.com/20x15/gb.png" alt="" width="20" height="15">
+            English
+          </button>
+          <button class="lang-option" data-lang="es" role="menuitem">
+            <img src="https://flagcdn.com/20x15/es.png" alt="" width="20" height="15">
+            Español
+          </button>
+          <button class="lang-option" data-lang="fr" role="menuitem">
+            <img src="https://flagcdn.com/20x15/fr.png" alt="" width="20" height="15">
+            Français
+          </button>
+          <button class="lang-option" data-lang="zh" role="menuitem">
+            <img src="https://flagcdn.com/20x15/cn.png" alt="" width="20" height="15">
+            中文
+          </button>
         </div>
+      </div>
+
+      <button class="hamburger" id="hamburger" data-i18n-aria="aria.hamburger" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-</div>
+  </nav>
 
-<div class="section-title" id="about_me" style="margin-top:50px;">
-    <h2 class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" >ABOUT ME</h2>
-</div>
+  <!-- ── Hero ───────────────────────────────── -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        <span data-i18n="hero.badge">Available for opportunities</span>
+      </div>
 
-<div id="about" class="about-us section">
+      <h1 class="hero-title reveal">
+        <span class="hero-name">Mattia</span>
+        <span class="hero-name accent">Marcanti</span>
+      </h1>
+
+      <p class="hero-subtitle reveal" data-i18n-html="hero.subtitle">
+        Software Developer <span class="sep">·</span> Computer Engineer
+      </p>
+
+      <div class="hero-actions reveal">
+        <a href="https://www.linkedin.com/in/mattiamarcanti/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="bi bi-linkedin" aria-hidden="true"></i>
+          LinkedIn
+        </a>
+        <a href="#about" class="btn btn-outline">
+          <span data-i18n="hero.discover">Scopri di più</span>
+          <i class="bi bi-arrow-down" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </div>
+  </section>
+
+  <!-- ── About ──────────────────────────────── -->
+  <section class="section" id="about">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 align-self-center">
-                <div class="services">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                                <div class="icon">
-                                    <img src="./source/svg/book.svg" style="height:74px;width:32px" alt="">
-                                </div>
-                                <div class="right-text">
-                                    <h4 style="font-family:Ubuntu">Formazione</h4>
-                                    <p style="font-family:Ubuntu">Laurea in Ingegneria Informatica , Università di Bologna</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-                                <div class="icon">
-                                    <img src="./source/svg/pc.svg" style="height:74px;width:32px" alt=""/>
-                                </div>
-                                <div class="right-text">
-                                    <h4 style="font-family:Ubuntu">IT knowledge</h4>
-                                    <p style="font-family:Ubuntu">Java, Spring, HTML, CSS, Bootstrap, JavaScript, ZK, iDempiere, SQL, Linux Shell</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
-                                <div class="icon">
-                                    <img src="./source/svg/palette.svg" style="height:74px;width:39px" alt=""/>
-                                </div>
-                                <div class="right-text">
-                                    <h4 style="font-family:Ubuntu">Graphic knowledge</h4>
-                                    <p style="font-family:Ubuntu">Adobe Photoshop, Adobe Illustrator, Adobe Premiere, Camtasia Studio, Canva</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
-                                <div class="icon">
-                                    <img src="./source/svg/emoji-heart-eyes.svg" style="height:74px;width:39px" alt=""/>
-                                </div>
-                                <div class="right-text">
-                                    <h4 style="font-family:Ubuntu">Hobby</h4>
-                                    <p style="font-family:Ubuntu">Calcio, Basket, Musica, Danza, Viaggiare, Stand up comedia</p>
-                                </div>
-                            </div>
-                        </div>
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="about.tag">Chi sono</span>
+        <h2 class="section-title" data-i18n="section.about.title">About Me</h2>
+        <p class="section-subtitle" data-i18n="about.subtitle">Ingegnere informatico con la passione per il codice e il design</p>
+      </div>
 
+      <div class="bento reveal">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="section-title secondTitle" id="experience">
-    <h2 class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" >ESPERIENZE</h2>
-</div>
-
-<div >
-
-
-    <div class="container experience">
-
-
-
-
-        <div class="row">
-            <div class="col">
-                <div class="timeline-steps aos-init aos-animate" data-aos="fade-up" style="margin-top: 70px;margin-bottom: 70px;">
-                    <div class="timeline-step wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                            <div class="inner-circle" data-wow-duration="1s" data-wow-delay="0.6s"></div>
-                            <p class="h6 mt-3 mb-1 textTimeLine" style="font-family: 'Ubuntu';font-size: 20px;font-weight:700;">1999</p>
-                            <p class="h6 mb-0 mb-lg-0 pTimeLine">Data di nascita: 23 settembre</p>
-                        </div>
-                    </div>
-                    <div class="timeline-step wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
-                            <div class="inner-circle"></div>
-                            <p class="h6 mt-3 mb-1 textTimeLine" style="font-family: 'Ubuntu';font-size: 20px;font-weight:700;">2018</p>
-                            <p class="h6 mb-0 mb-lg-0 pTimeLine">Diploma Informatica e telecomunicazioni - IIS Belluzzi</p>
-                        </div>
-                    </div>
-                    <div class="timeline-step wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
-                            <div class="inner-circle"></div>
-                            <p class="h6 mt-3 mb-1 textTimeLine" style="font-family: 'Ubuntu';font-size: 20px;font-weight:700;">2018</p>
-                            <p class="h6 mb-0 mb-lg-0 pTimeLine">Web Designer - Cineca</p>
-                        </div>
-                    </div>
-                    <div class="timeline-step wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
-                            <div class="inner-circle"></div>
-                            <p class="h6 mt-3 mb-1 textTimeLine" style="font-family: 'Ubuntu';font-size: 20px;font-weight:700;">2021</p>
-                            <p class="h6 mb-0 mb-lg-0 pTimeLine">Laurea Ingegneria Informatica - Università di Bologna</p>
-                        </div>
-                    </div>
-                    <div class="timeline-step mb-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.0s">
-                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
-                            <div class="inner-circle"></div>
-                            <p class="h6 mt-3 mb-1 textTimeLine" style="font-family: 'Ubuntu';font-size: 20px;font-weight:700;">2022</p>
-                            <p class="h6 mb-0 mb-lg-0 pTimeLine" class="descTimeline">Sviluppatore Software - Gruppo Finmatica</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Formazione — wide -->
+        <div class="bento-card bento-wide" style="--c:#6366f1">
+          <div class="bento-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <h3 class="bento-title" data-i18n="bento.formation.title">Formazione</h3>
+          <p class="bento-text" data-i18n-html="bento.formation.text">Laureato in <strong>Ingegneria Informatica</strong> presso l'Università di Bologna (Unibo), con focus su sistemi software complessi e intelligenza artificiale.</p>
+          <div class="tags">
+            <span class="tag">Unibo</span>
+            <span class="tag" data-i18n="bento.formation.tag2">Laurea Triennale</span>
+            <span class="tag">2021</span>
+          </div>
         </div>
 
-
-        <div class="container" style="margin-top:-30px">
-            <div class="row text-center justify-content-center">
-                <div class="col-lg-6 col-12">
-                    <select id="selectAttestati" class="form-select selectAttestato wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" aria-label="Scegli Attestato">
-                        <option value="AttestatoLaurea.pdf" selected>Attestato Laurea Ingegneria Informatica - Unibo</option>
-                        <option value="AttestatoLinguaIngleseB2.pdf">Attestato Lingua Inglese B2 - Unibo</option>
-                        <option value="AttestatoSicurezzaModulo1.pdf">Attestato Corso Sicurezza Sul Lavoro Mod.1 - Unibo</option>
-                        <option value="AttestatoSicurezzaModulo2.pdf">Attestato Corso Sicurezza Sul Lavoro Mod.2 - Unibo</option>
-                        <option value="AttestatoJavaAcademy.pdf">Attestato Java Academy - Experis</option>
-                        <option value="AttestatoSicurezzaManpower.pdf">Attestato Corso Sicurezza Sul Lavoro - Manpower</option>
-                        <option value="AttestatoSicurezzaRischioBasso2022.pdf">Attestato Corso Sicurezza Rischio Basso 2022</option>
-                        <option value="AttestatoSicurezzaRischioAlto2016.pdf">Attestato Corso Sicurezza Rischio Alto 2016</option>
-                        <option value="AttestatoSuperioriPotenziamentoInglese.pdf">Attestato Corso Potenziamento Lingua Inglese</option>
-                        <option value="DiplomaScuoleMedie.pdf">Diploma Scuole Medie</option>
-                    </select>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <a href="#" class="attestato justify-content-center text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="font-family:'Ubuntu'" onclick="loadAttestati" id="buttonAttestato">Vedi Attestato</a>
-                </div>
-            </div>
+        <!-- IT Knowledge -->
+        <div class="bento-card" style="--c:#06b6d4">
+          <div class="bento-icon"><i class="bi bi-code-slash"></i></div>
+          <h3 class="bento-title" data-i18n="bento.itknowledge.title">IT Knowledge</h3>
+          <div class="pills">
+            <span class="pill blue">Java</span>
+            <span class="pill cyan">JavaScript</span>
+            <span class="pill pink">Web Design</span>
+            <span class="pill green">SQL</span>
+            <span class="pill orange">Script Bash</span>
+            <span class="pill purple">CI/CD</span>
+            <span class="pill purple">iDempiere</span>
+            <span class="pill blue">Claude Code</span>
+          </div>
         </div>
 
+        <!-- Grafica -->
+        <div class="bento-card" style="--c:#ec4899">
+          <div class="bento-icon"><i class="bi bi-palette-fill"></i></div>
+          <h3 class="bento-title" data-i18n="bento.graphic.title">Grafica & Design</h3>
+          <div class="pills">
+            <span class="pill pink">Photoshop</span>
+            <span class="pill pink">Illustrator</span>
+            <span class="pill orange">Premiere</span>
+            <span class="pill orange">Camtasia</span>
+            <span class="pill blue">Canva</span>
+          </div>
+        </div>
+
+        <!-- Hobby -->
+        <div class="bento-card bento-accent bento-wide" style="--c:#f59e0b">
+          <div class="bento-icon"><i class="bi bi-stars"></i></div>
+          <h3 class="bento-title" data-i18n="bento.hobby.title">Hobby & Passioni</h3>
+          <div class="hobby-grid">
+            <span class="hobby"><i class="bi bi-dribbble"></i> <span data-i18n="hobby.calcio">Calcio</span></span>
+            <span class="hobby"><i class="bi bi-trophy"></i> <span data-i18n="hobby.basket">Basket</span></span>
+            <span class="hobby"><i class="bi bi-music-note-beamed"></i> <span data-i18n="hobby.musica">Musica</span></span>
+            <span class="hobby"><i class="bi bi-person-arms-up"></i> <span data-i18n="hobby.danza">Danza</span></span>
+            <span class="hobby"><i class="bi bi-airplane"></i> <span data-i18n="hobby.viaggiare">Viaggiare</span></span>
+            <span class="hobby"><i class="bi bi-mic"></i> <span data-i18n="hobby.standup">Stand-up</span></span>
+            <span class="hobby"><i class="bi bi-snow2"></i> <span data-i18n="hobby.sci">Sci</span></span>
+            <span class="hobby"><i class="bi bi-cpu"></i> <span data-i18n="hobby.tecnologia">Tecnologia</span></span>
+            <span class="hobby"><i class="bi bi-translate"></i> <span data-i18n="hobby.lingue">Lingue</span></span>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
+  <!-- ── Experience ─────────────────────────── -->
+  <section class="section section-dark" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="exp.tag">Percorso</span>
+        <h2 class="section-title" data-i18n="section.exp.title">Experience</h2>
+        <p class="section-subtitle" data-i18n="exp.subtitle">Il mio percorso accademico e professionale</p>
+      </div>
 
-</div>
+      <div class="timeline">
 
-
-
-<div class="section-title thirdTitle" id="portfolio">
-
-    <h2 class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">I MIEI PROGETTI</h2>
-</div>
-
-
-
-<!----------------------------------------->
-<section>
-    <div class="container py-4">
-
-        <article class="postcardProj dark blue wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <a class="postcard__img_link" href="https://mega.nz/folder/V5AkiZ4J#FJCWPJzXe5h2DrxXR_tCCw">
-                <img class="postcard__img" src="./source/image/imgtesi.jpg" alt="Image Title" />
-            </a>
-            <div class="postcard__text">
-                <h1 class="postcard__title blue" style="font-family: 'Ubuntu';font-size: 24px;"><a href="https://mega.nz/folder/V5AkiZ4J#FJCWPJzXe5h2DrxXR_tCCw">Tesi di Laurea - Ingegneria Informatica</a></h1>
-                <div class="postcard__subtitle small">
-                    <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2" style="font-family: 'Ubuntu';"></i>Dicembre 2021
-                    </time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt" style="font-family: 'Ubuntu';font-size: 14px;">Analisi della relazione tra coreografia robotica e valutazione artistica - Tesi di laurea Mattia Marcanti 3/12/21 Ingegneria Informatica - Fondamenti di Informatica T1. Correlatori: Dott. Paola Mello, Dott. Allegra De Filippo. Il progetto è stato realizzato in Python e Java.</div>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item play blue">
-                        <a href="https://www.mattiamarcanti.it/bigUpload/TesiDiLaurea.mp4"><i class="bi bi-eye" style="margin-right: 10px;"></i>Vedi Discorso</a>
-                    </li>
-                    <li class="tag__item play blue">
-                        <a href="https://mega.nz/folder/V5AkiZ4J#FJCWPJzXe5h2DrxXR_tCCw"><i class="bi bi-download" style="margin-right: 10px;"></i>Scarica progetto</a>
-                    </li>
-                </ul>
+        <!-- 1999 -->
+        <div class="tl-item reveal">
+          <div class="tl-year">1999</div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <span class="tl-badge purple" data-i18n="tl.1999.badge">Inizio</span>
+              <span class="tl-date" data-i18n="tl.1999.date">23 Settembre 1999</span>
             </div>
-        </article>
-
-
-        <article class="postcardProj light red wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <a class="postcard__img_link" href="https://depag.e-pal.it/PagamentiOnLine/">
-                <img class="postcard__img" src="./source/image/pagopa.png" alt="Image Title" />
-            </a>
-            <div class="postcard__text t-dark">
-                <h1 class="postcard__title red" style="font-family: 'Ubuntu';font-size: 24px;"><a href="https://depag.e-pal.it/PagamentiOnLine/">Depag - Pagamenti Online</a></h1>
-                <div class="postcard__subtitle small">
-                    <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2" style="font-family: 'Ubuntu';"></i>Maggio 2022
-                    </time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt" style="font-family: 'Ubuntu';font-size: 14px;">Durante la mia esperienza all'interno di Gruppo Finmatica ho collaborato allo sviluppo di Depag, applicativo web per la sanità e la pubblica amministrazione di provincie, comuni ed enti italiani, che aiuta nella gestione dei pagamenti PagoPA. Il progetto è realizzato in Springboot Java e ZK. </div>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="bi bi-eye-slash" style="margin-right: 10px;"></i>Codice segreto</li>
-                    <li class="tag__item play red">
-                        <a href="https://depag.e-pal.it/PagamentiOnLine/"><i class="bi bi-eye" style="margin-right: 10px;"></i>Visita il sito</a>
-                    </li>
-                    <li class="tag__item play red">
-                        <a href="https://pagopa-provinciadioristano.e-pal.it/PagamentiOnLine/manuale/apriPdf"><i class="bi bi-eye" style="margin-right: 10px;"></i>Vedi Documentazione</a>
-                    </li>
-                </ul>
+            <h3 class="tl-title" data-i18n="tl.1999.title">Nascita</h3>
+            <p class="tl-text" data-i18n="tl.1999.text">Sono nato il 23 settembre 1999.</p>
+            <div class="tl-files">
+              <button class="file-btn" onclick="openPDF('source/pdf/DiplomaScuoleMedie.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.diploma.medie">Diploma Scuole Medie</span>
+              </button>
             </div>
-        </article>
+          </div>
+        </div>
 
-        <article class="postcardProj dark yellow wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <a class="postcard__img_link" href="https://www.smarthealth.it/h-erp/">
-                <img class="postcard__img" src="./source/image/erp.png" alt="Image Title" />
-            </a>
-            <div class="postcard__text">
-                <h1 class="postcard__title yellow" style="font-family: 'Ubuntu';font-size: 24px;"><a href="https://www.smarthealth.it/h-erp/">Smart * H-ERP</a></h1>
-                <div class="postcard__subtitle small">
-                    <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2" style="font-family: 'Ubuntu';"></i>Febbraio 2024
-                    </time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt" style="font-family: 'Ubuntu';font-size: 14px;">Durante la mia esperienza all'interno di Gruppo Finmatica ho collaborato allo sviluppo di Smart * H-ERP, un sistema Enterprise Resource Planning che integra tutti i processi amministrativi di una azienda sanitaria. Il progetto è realizzato in Java e con l'utilizzo del framework iDempiere.</div>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="bi bi-eye-slash" style="margin-right: 10px;"></i>Codice segreto</li>
-                    <li class="tag__item play yellow">
-                        <a href="https://www.smarthealth.it/h-erp/"><i class="bi bi-eye" style="margin-right: 10px;"></i>Visita il sito</a>
-                    </li>
-                </ul>
+        <!-- 2018 Diploma -->
+        <div class="tl-item tl-right reveal">
+          <div class="tl-year">2018</div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <span class="tl-badge blue" data-i18n="tl.2018d.badge">Diploma</span>
+              <span class="tl-date" data-i18n="tl.2018d.date">Giugno 2018</span>
             </div>
-        </article>
-
-
-        
-
-
-        <article class="postcardProj light green wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <a class="postcard__img_link" href="https://mega.nz/folder/0woEGDQD#msG4KhsRNf6DfJfq-iDjVA">
-                <img class="postcard__img" src="./source/image/asl.jpg" alt="Image Title" />
-            </a>
-            <div class="postcard__text t-dark">
-                <h1 class="postcard__title green" style="font-family: 'Ubuntu';font-size: 24px;"><a href="https://mega.nz/folder/0woEGDQD#msG4KhsRNf6DfJfq-iDjVA">Tesina Scuole Superiori - Informatica e telecomunicazioni</a></h1>
-                <div class="postcard__subtitle small">
-                    <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Anno 2017/18
-                    </time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt" style="font-family: 'Ubuntu';font-size: 14px;">'Il chatbot CiBi e la messaggistica istantanea'. Tesina riguardante l'esperienza di scuola lavoro, la creazione di un prototipo di ChatBot e il collegamento di quest'ultimo con alcuni argomenti studiati durante il quinto anno di scuole superiori.</div>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item play green">
-                        <a href="https://mega.nz/folder/0woEGDQD#msG4KhsRNf6DfJfq-iDjVA"><i class="bi bi-download" style="margin-right: 10px;"></i>Scarica progetto</a>
-                    </li>
-                </ul>
+            <h3 class="tl-title" data-i18n="tl.2018d.title">Diploma IIS Belluzzi</h3>
+            <p class="tl-text" data-i18n="tl.2018d.text">Diploma in Informatica e Telecomunicazioni presso l'Istituto IIS Belluzzi di Bologna.</p>
+            <div class="tl-files">
+              <button class="file-btn" onclick="openPDF('source/pdf/AttestatoSuperioriPotenziamentoInglese.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.attestato.inglese">Attestato inglese scuole superiori</span>
+              </button>
+              <button class="file-btn" onclick="openPDF('source/pdf/AttestatoSicurezzaRischioAlto2016.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.sicurezza.alto">Sicurezza Rischio Alto</span>
+              </button>
             </div>
-        </article>
+          </div>
+        </div>
 
+        <!-- 2018 Cineca -->
+        <div class="tl-item reveal">
+          <div class="tl-year">2018</div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <span class="tl-badge green" data-i18n="tl.2018c.badge">Lavoro</span>
+              <span class="tl-date">2018</span>
+            </div>
+            <h3 class="tl-title" data-i18n="tl.2018c.title">Web Designer — Cineca</h3>
+            <p class="tl-text" data-i18n="tl.2018c.text">Prima esperienza lavorativa come Web Designer presso Cineca, uno dei maggiori centri di calcolo in Europa.</p>
+          </div>
+        </div>
 
+        <!-- 2021 Laurea -->
+        <div class="tl-item tl-right reveal">
+          <div class="tl-year">2021</div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <span class="tl-badge blue" data-i18n="tl.2021.badge">Laurea</span>
+              <span class="tl-date" data-i18n="tl.2021.date">Dicembre 2021</span>
+            </div>
+            <h3 class="tl-title" data-i18n="tl.2021.title">Laurea in Ingegneria Informatica</h3>
+            <p class="tl-text" data-i18n="tl.2021.text">Laureato in Ingegneria Informatica presso l'Università di Bologna. Tesi sulla coreografia robotica e valutazione artistica automatica.</p>
+            <div class="tl-files">
+              <button class="file-btn" onclick="openPDF('source/pdf/AttestatoLaurea.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.attestato.laurea">Attestato Laurea</span>
+              </button>
+              <button class="file-btn" onclick="openPDF('source/pdf/AttestatoLinguaIngleseB2.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.inglese.b2">Inglese B2</span>
+              </button>
+              <button class="file-btn" onclick="openPDF('source/pdf/AttestatoJavaAcademy.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.java.academy">Java Academy</span>
+              </button>
+            </div>
+          </div>
+        </div>
 
+        <!-- 2022 Finmatica -->
+        <div class="tl-item reveal">
+          <div class="tl-year">2022</div>
+          <div class="tl-dot tl-dot-active" aria-hidden="true"></div>
+          <div class="tl-card tl-card-featured">
+            <div class="tl-head">
+              <span class="tl-badge purple" data-i18n="tl.2022.badge">Attuale</span>
+              <span class="tl-date" data-i18n="tl.2022.date">Maggio 2022 — Presente</span>
+            </div>
+            <h3 class="tl-title" data-i18n="tl.2022.title">Sviluppatore Software — Gruppo Finmatica</h3>
+            <p class="tl-text" data-i18n="tl.2022.text">Sviluppo di software ERP per la sanità e la pubblica amministrazione. Specializzato in Java, Spring Boot, ZK Framework e iDempiere.</p>
+            <div class="tl-tech">
+              <span class="tech">Java</span>
+              <span class="tech">Spring Boot</span>
+              <span class="tech">ZK</span>
+              <span class="tech">iDempiere</span>
+              <span class="tech">SQL</span>
+            </div>
+            <div class="tl-files">
+              <button class="file-btn" onclick="openPDF('source/pdf/AttestatoSicurezzaModulo1.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.sicurezza.mod1">Sicurezza Mod. 1</span>
+              </button>
+              <button class="file-btn" onclick="openPDF('source/pdf/AttestatoSicurezzaModulo2.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.sicurezza.mod2">Sicurezza Mod. 2</span>
+              </button>
+              <button class="file-btn" onclick="openPDF('source/pdf/AttestatoSicurezzaRischioBasso2022.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.sicurezza.2022">Sicurezza 2022</span>
+              </button>
+              <button class="file-btn" onclick="openPDF('source/pdf/AttestatoSicurezzaManpower.pdf')">
+                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                <span data-i18n="file.sicurezza.manpower">Sicurezza Manpower</span>
+              </button>
+            </div>
+          </div>
+        </div>
 
+      </div>
     </div>
-</section>
+  </section>
 
+  <!-- ── Projects ───────────────────────────── -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="proj.tag">Lavori</span>
+        <h2 class="section-title" data-i18n="section.proj.title">Projects</h2>
+        <p class="section-subtitle" data-i18n="proj.subtitle">Alcuni dei progetti più significativi del mio percorso</p>
+      </div>
 
+      <div class="projects-grid">
 
-
-
-
-
-<!----------------------------------------->
-
-<div class="section-title forthTitle" style="margin-top:50px;">
-    <h2 class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">GALLERIA</h2>
-</div>
-
-<section class="pt-5 pb-5" id="gallery">
-    <div class="container" style="margin-bottom: 50px;margin-top:30px;">
-        <div class="row">
-
-            <div class="col-12 text-right">
-                <a class="btn btn-primary mb-3 mr-1" style="color:black;background-color:white;box-shadow:none;border-color:white;" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                    <i class="fa fa-arrow-left"></i>
+        <!-- Tesi -->
+        <div class="proj-card reveal">
+          <div class="proj-img-wrap">
+            <img src="source/image/imgtesi.jpg" alt="Tesi di Laurea — Coreografia Robotica" class="proj-img" loading="lazy">
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://mattiamarcanti.it/bigUpload/TesiDiLaurea.mp4" target="_blank" rel="noopener noreferrer" class="proj-link">
+                  <i class="bi bi-play-fill"></i> <span data-i18n="link.video">Video</span>
                 </a>
-                <a class="btn btn-primary mb-3 " style="color:black;background-color:white;box-shadow:none;border-color:white;" href="#carouselExampleIndicators2" role="button" data-slide="next">
-                    <i class="fa fa-arrow-right"></i>
+                <a href="https://mega.nz/folder/V5AkiZ4J#Xxk_m-5FgHxZ-GJjRrRHfQ" target="_blank" rel="noopener noreferrer" class="proj-link">
+                  <i class="bi bi-download"></i> <span data-i18n="link.download">Download</span>
                 </a>
+              </div>
             </div>
-            <div class="col-12">
-                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid"  alt="100%x280" src="./source/image/gallery9.jpg">
-                                        <p>#dance</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/gallery3.jpg">
-                                        <p>backInTheDays</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/gallery8.jpg">
-                                        <p>Broship</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid"  alt="100%x280" src="./source/image/gallery7.jpg">
-                                        <p>TRAP</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto6.jpg">
-                                        <p>live</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/gallery2.jpg">
-                                        <p>scuola</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryE.png" >
-                                        <p>03/12/21</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryC.png">
-                                        <p>2 A.M.</A></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryD.png">
-                                        <p>Bologna</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid" id="checkDimensioneImmagine">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto8.jpg">
-                                        <p>diciottesimo</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/gallery10.jpg" >
-                                        <p>moscow mule</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto1.jpg">
-                                        <p>summer</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <div class="carousel-item">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/gallery11.jpg" >
-                                        <p>#me</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto5.jpg">
-                                        <p>C4lci0</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/gallery6.jpg">
-                                        </img>
-                                        <p>Sardegnaaa</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <a href="https://www.mattiamarcanti.it/bigUpload/Compilation.mp4">
-                                            <img class="img-fluid" alt="100%x280" src="./source/image/compilationvideo.png">
-                                        </a>
-                                        <p>Compilation</p>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <a href="https://www.mattiamarcanti.it/bigUpload/CovidFreestyle.mp4">
-                                            <img class="img-fluid" alt="100%x280" src="./source/image/coronavideo.png">
-                                        </a>
-                                        <p>Covid</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <a href="https://www.mattiamarcanti.it/bigUpload/TesiDiLaurea.mp4">
-                                            <img class="img-fluid" alt="100%x280" src="./source/image/discorsovideo.png">
-                                        </a>
-                                        <p>Discorso</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="carousel-item">
-                            <div class="row">
-
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <a href="https://www.mattiamarcanti.it/bigUpload/mini.mp4">
-                                            <img class="img-fluid" alt="100%x280" src="./source/image/minivideo.png">
-                                        </a>
-                                        <p>Mini me</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto9.jpg" >
-                                        <p>So MaGiC</p>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryA.png" >
-                                        <p>#mini</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid" id="checkDimensioneImmagine">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto01.jpg">
-                                        <p>racchettoni</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto11.JPG" >
-                                        <p>MM</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto22.jpg">
-                                        <p>we we</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid" id="checkDimensioneImmagine">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto2.jpg">
-                                        <p>4L</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto4.jpg" >
-                                        <p>tr4ve1</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/foto7.jpg">
-                                        <p>family</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- new-->
-
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew1.jpg">
-                                        <p>self</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew2.jpg" >
-                                        <p>sIsTeR :O</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew3.png">
-                                        <p>patenteee</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew4.jpg">
-                                        <p>nocete</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew5.jpg" >
-                                        <p>4 MORI!!</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew6.jpg">
-                                        <p>5antan4</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew7.jpg">
-                                        <p>IRISH</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew8.jpg" >
-                                        <p>*birthday*</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew9.jpg">
-                                        <p>/|_</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew10.jpg">
-                                        <p>FLEXIN'</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew11.jpg" >
-                                        <p>GREECE LOVER</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew12.jpg">
-                                        <p>family</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew13.jpg">
-                                        <p>GRAND-parents</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew14.jpg" >
-                                        <p>milano</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew15.jpg">
-                                        <p>friendship</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew16.jpg">
-                                        <p>friendship 2</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew17.jpg" >
-                                        <p>40131=>051</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew18.jpg">
-                                        <p>[smack]</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew19.jpg">
-                                        <p>mind</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew20.jpg" >
-                                        <p>Via Zanardi</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew21.jpg">
-                                        <p>^HIGH-school</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew22.jpg">
-                                        <p>milano 2</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew23.jpg" >
-                                        <p>Caffe' shakerato</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card polaroid">
-                                        <img class="img-fluid" alt="100%x280" src="./source/image/galleryNew24.jpg">
-                                        <p>seafront</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-date" data-i18n="proj.tesi.date">Dicembre 2021</span>
+              <span class="proj-cat" data-i18n="proj.tesi.cat">Tesi di Laurea</span>
             </div>
+            <h3 class="proj-title" data-i18n="proj.tesi.title">Coreografia Robotica</h3>
+            <p class="proj-desc" data-i18n="proj.tesi.desc">Tesi triennale sulla coreografia robotica e la valutazione artistica automatica tramite algoritmi di machine learning.</p>
+            <div class="proj-tech">
+              <span class="tech-p">Python</span>
+              <span class="tech-p">Java</span>
+              <span class="tech-p">Machine Learning</span>
+            </div>
+          </div>
         </div>
+
+        <!-- Depag -->
+        <div class="proj-card proj-featured reveal">
+          <div class="proj-img-wrap">
+            <img src="source/image/pagopa.png" alt="Depag — Pagamenti Online PagoPA" class="proj-img" loading="lazy">
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://depag.e-pal.it/PagamentiOnLine/" target="_blank" rel="noopener noreferrer" class="proj-link">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-i18n="link.live">Sito Live</span>
+                </a>
+                <a href="https://pagopa-provinciadioristano.e-pal.it/PagamentiOnLine/home.zul" target="_blank" rel="noopener noreferrer" class="proj-link">
+                  <i class="bi bi-file-text"></i> <span data-i18n="link.docs">Docs</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-date" data-i18n="proj.depag.date">Maggio 2022</span>
+              <span class="proj-cat proj-cat-acc" data-i18n="proj.depag.cat">Aziendale</span>
+            </div>
+            <h3 class="proj-title">Depag — PagoPA</h3>
+            <p class="proj-desc" data-i18n="proj.depag.desc">Sistema di pagamenti online PagoPA per sanità e pubblica amministrazione. Soluzione enterprise per la gestione digitale dei pagamenti pubblici.</p>
+            <div class="proj-tech">
+              <span class="tech-p">Java</span>
+              <span class="tech-p">Spring Boot</span>
+              <span class="tech-p">ZK Framework</span>
+              <span class="tech-p">PagoPA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smart H-ERP -->
+        <div class="proj-card proj-featured reveal">
+          <div class="proj-img-wrap">
+            <img src="source/image/erp.png" alt="Smart H-ERP" class="proj-img" loading="lazy">
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://smarthealth.it/h-erp/" target="_blank" rel="noopener noreferrer" class="proj-link">
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-i18n="link.live">Sito Live</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-date" data-i18n="proj.erp.date">Febbraio 2024</span>
+              <span class="proj-cat proj-cat-acc" data-i18n="proj.erp.cat">Aziendale</span>
+            </div>
+            <h3 class="proj-title">Smart H-ERP</h3>
+            <p class="proj-desc" data-i18n="proj.erp.desc">Enterprise Resource Planning completo per aziende sanitarie. Sistema integrato per la gestione di risorse, processi e dati in ambito sanitario.</p>
+            <div class="proj-tech">
+              <span class="tech-p">Java</span>
+              <span class="tech-p">iDempiere</span>
+              <span class="tech-p">ERP</span>
+              <span class="tech-p">Healthcare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tesina -->
+        <div class="proj-card reveal">
+          <div class="proj-img-wrap">
+            <img src="source/image/asl.jpg" alt="Tesina Scuole Superiori — ChatBot" class="proj-img" loading="lazy">
+            <div class="proj-overlay">
+              <div class="proj-links">
+                <a href="https://mega.nz/folder/0woEGDQD#KCv5fHzNXEKdLnPfULPftg" target="_blank" rel="noopener noreferrer" class="proj-link">
+                  <i class="bi bi-download"></i> <span data-i18n="link.download">Download</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-date">2017 / 2018</span>
+              <span class="proj-cat" data-i18n="proj.tesina.cat">Scolastico</span>
+            </div>
+            <h3 class="proj-title">ChatBot CiBi</h3>
+            <p class="proj-desc" data-i18n="proj.tesina.desc">Progetto di tesina scolastica incentrato sullo sviluppo di un chatbot e sistemi di messaggistica istantanea.</p>
+            <div class="proj-tech">
+              <span class="tech-p">ChatBot</span>
+              <span class="tech-p" data-i18n="proj.tesina.tech">Messaggistica</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-</section>
+  </section>
 
-
-
-
-<div class="section-title fifthTitle" id="contact" style="margin-top:50px;">
-    <h2 class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">CONTATTAMI</h2>
-</div>
-
-<div class="contact-us section">
+  <!-- ── Gallery ─────────────────────────────── -->
+  <section class="section section-dark" id="gallery">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 align-self-center wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <div class="col-sm-6">
-                    <div>
-                        <h3 class="text-white" style="font-family:Ubuntu">Lascia un messaggio!</h3>
-                        <p class="" style="font-family:Ubuntu">Puoi lasciarmi un messaggio tramite i miei contatti, i miei social networks oppure tramite il form presente</p>
-                    </div>
-                    <div class="links" id="bordering" style="width:334px">
-                        <a href="#" class="btn rounded text-white p-3"><i class="fa fa-phone icon text-white pr-3"></i>+39 3935749061</a>
-                        <a href="#" class="btn rounded text-white p-3"><i class="fa fa-envelope icon text-white pr-3"></i>mattiamarcanti99@gmail.com</a>
-                        <a href="#" class="btn rounded text-white p-3"><i class="fa fa-map-marker icon text-white pr-3"></i> Bologna (BO) 40131, Italy</a>
-                    </div>
-                    <div class="pt-lg-4 d-flex flex-row justify-content-start socials">
-                        <div class="pad-icon">
-                            <a href="https://www.tiktok.com/@mattiamarcanti17">
-                                <img src="./source/image/tiktok.png" alt="TikTok" style="
-                    height: 23px;
-                    width: 23px;
-                    margin-top: -1px;
-                ">
-                            </a>
-                        </div>
-                        <div class="pad-icon"> <a class="fa fa-linkedin text-white" href="https://www.linkedin.com/in/mattiamarcanti/"></a> </div>
-                        <div class="pad-icon"> <a class="fa fa-instagram text-white" href="https://www.instagram.com/mattiamarcanti/"></a> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeIn" id="divForm" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <div id="contact">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <fieldset>
-                                <input style="font-family:Ubuntu" type="text" name="name" id="nomeInserito" placeholder="Nome" autocomplete="on" required>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-6">
-                            <fieldset>
-                                <input style="font-family:Ubuntu" type="text" name="surname" id="cognomeInserito" placeholder="Cognome" autocomplete="on" required>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <input type="text" style="font-family:Ubuntu" name="email" id="emailInserita" pattern="[^ @]*@[^ @]*" placeholder="La tua email" required="">
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <textarea style="font-family:Ubuntu" name="messaggioInserito" type="text" class="form-control" id="messaggioInserito" placeholder="Messaggio" required=""></textarea>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <button type="submit" id="form-submit" class="main-button " style="font-family:Ubuntu">Invia Messaggio!</button>
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="gallery.tag">Momenti</span>
+        <h2 class="section-title" data-i18n="section.gallery.title">Gallery</h2>
+        <p class="section-subtitle" data-i18n="gallery.subtitle">Alcuni momenti della mia vita</p>
+      </div>
+
+      <div class="carousel reveal" id="carousel">
+        <div class="carousel-track" id="carouselTrack"></div>
+        <button class="carousel-btn carousel-prev" id="carouselPrev" data-i18n-aria="aria.prev" aria-label="Precedente">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="carousel-btn carousel-next" id="carouselNext" data-i18n-aria="aria.next" aria-label="Successivo">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
     </div>
-</div>
+  </section>
 
-
-
-
-
-<footer>
+  <!-- ── Contact ─────────────────────────────── -->
+  <section class="section" id="contact">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-                <p>© Copyright 2022 Mattia Marcanti Co. All Rights Reserved.</p>
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="contact.tag">Contatti</span>
+        <h2 class="section-title" data-i18n="section.contact.title">Get in Touch</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Vuoi collaborare o semplicemente fare due chiacchiere?</p>
+      </div>
+
+      <div class="contact-grid reveal">
+
+        <!-- Info -->
+        <div class="contact-info">
+          <h3 class="contact-info-title" data-i18n="contact.info.title">Parliamoci!</h3>
+          <p class="contact-info-text" data-i18n="contact.info.text">Sono sempre aperto a nuove opportunità, collaborazioni e progetti interessanti. Non esitare a contattarmi.</p>
+
+          <div class="contact-items">
+            <a href="tel:+393935749061" class="contact-item">
+              <div class="c-icon"><i class="bi bi-telephone-fill"></i></div>
+              <div class="c-content">
+                <span class="c-label" data-i18n="contact.phone.label">Telefono</span>
+                <span class="c-value">+39 393 574 9061</span>
+              </div>
+            </a>
+            <a href="mailto:mattiamarcanti99@gmail.com" class="contact-item">
+              <div class="c-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div class="c-content">
+                <span class="c-label">Email</span>
+                <span class="c-value">mattiamarcanti99@gmail.com</span>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="c-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <div class="c-content">
+                <span class="c-label" data-i18n="contact.city.label">Città</span>
+                <span class="c-value" data-i18n="contact.city.value">Bologna (BO) 40131, Italia</span>
+              </div>
             </div>
+          </div>
+
+          <div class="social-row">
+            <a href="https://www.tiktok.com/@mattiamarcanti17" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
+              <img src="source/image/tiktok.png" alt="" style="width:18px;height:18px;filter:brightness(0) invert(1)">
+            </a>
+            <a href="https://www.linkedin.com/in/mattiamarcanti/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/mattiamarcanti/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
         </div>
+
+        <!-- Form -->
+        <div class="form-wrap">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="fNome" name="nome" class="form-input" placeholder=" " required autocomplete="given-name">
+                <label for="fNome" class="form-label" data-i18n="form.nome">Nome</label>
+              </div>
+              <div class="form-group">
+                <input type="text" id="fCognome" name="cognome" class="form-input" placeholder=" " required autocomplete="family-name">
+                <label for="fCognome" class="form-label" data-i18n="form.cognome">Cognome</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" id="fEmail" name="email" class="form-input" placeholder=" " required autocomplete="email">
+              <label for="fEmail" class="form-label">Email</label>
+            </div>
+            <div class="form-group">
+              <textarea id="fMsg" name="messaggio" class="form-input form-textarea" placeholder=" " required rows="5"></textarea>
+              <label for="fMsg" class="form-label" data-i18n="form.message">Messaggio</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span id="btnText"><i class="bi bi-send" aria-hidden="true"></i> <span data-i18n="form.submit">Invia Messaggio</span></span>
+              <span id="btnLoad" style="display:none"><i class="bi bi-arrow-repeat spin" aria-hidden="true"></i> <span data-i18n="form.sending">Invio in corso…</span></span>
+            </button>
+            <div class="form-success" id="formSuccess" style="display:none" role="alert">
+              <i class="bi bi-check-circle-fill"></i>
+              <h4 data-i18n="form.success.title">Messaggio inviato!</h4>
+              <p data-i18n="form.success.text">Grazie per avermi scritto, ti rispondo al più presto.</p>
+            </div>
+          </form>
+        </div>
+
+      </div>
     </div>
-</footer>
+  </section>
 
-<a href="#top" id="buttonToTop" class="back-to-top d-flex align-items-center justify-content-center">
-    <img style="height:60%" src="./source/svg/arrow-up.svg">
-</a>
+  <!-- ── Footer ─────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#top" class="footer-logo" data-i18n-aria="aria.backtop" aria-label="Torna in cima">MM</a>
+        <p class="footer-copy" data-i18n="footer.copy">© 2024 Mattia Marcanti. Tutti i diritti riservati.</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/mattiamarcanti/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:mattiamarcanti99@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<script>
-    //load attestati
-    const buttonAtt = document.getElementById('buttonAttestato');
-    buttonAtt.onclick= function() {
-        var attestato = document.getElementById('selectAttestati').value;
-        window.open('source/pdf/'+attestato, '_blank', 'fullscreen=yes');
-        return false;
-    }
+  <!-- ── Back to Top ────────────────────────── -->
+  <button class="back-top" id="backTop" data-i18n-aria="aria.backtop" aria-label="Torna in cima">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
 
-    const buttonCV = document.getElementById('buttonCV');
-    buttonCV.onclick= function() {
-        window.open('source/pdf/CVMattiaMarcanti.pdf', '_blank', 'fullscreen=yes');
-        return false;
-    }
+  <!-- Mobile menu overlay -->
+  <div id="navOverlay" class="nav-overlay"></div>
 
-    const buttonInviaMessaggio = document.getElementById('form-submit');
-    buttonInviaMessaggio.onclick= function() {
-        //preparo le variabili prima del replace
-        var nomeInserito = document.getElementById('nomeInserito').value;
-        var cognomeInserito = document.getElementById('cognomeInserito').value;
-        var email = document.getElementById('emailInserita').value;
-        var messaggio = document.getElementById('messaggioInserito').value;
-
-        if(nomeInserito == null || nomeInserito == ""){
-            alert('Inserire un nome valido');
-
-        } else if(cognomeInserito == null || cognomeInserito == ""){
-            alert('Inserire un cognome valido');
-        } else if(email == null || email == ""){
-            alert('Inserire una email valida');
-        }else if(messaggio == null || messaggio == ""){
-            alert('Inserire un messaggio valido');
-        } else {
-
-            //schema ajax con callback
-            var objXMLHttpRequest = new XMLHttpRequest();
-            objXMLHttpRequest.onreadystatechange = function() {
-                if(objXMLHttpRequest.readyState === 4) {
-                    if(objXMLHttpRequest.status === 200) {
-
-                        //andata a buon fino eseguo il replace
-                        var form = document.getElementById('divForm'), parent = form.parentNode,
-                            tempDiv = document.createElement('div');
-                        var w = form.offsetWidth;
-                        var h = form.offsetHeight;
-                        tempDiv.innerHTML = "<div class='wrapper col-lg-6' style='position:relative;height:"+h+";width:"+w+"'><div class='row'><svg class='animated-check' viewBox='0 0 24 24'><path d='M4.1 12.7L9 17.6 20.3 6.3' fill='none' /></svg><div class='col-lg-12 text-center'><h3 class='text-white' style='font-family:Ubuntu'>Messaggio inviato correttamente!</h3></div>";
-                        var conferma = tempDiv.childNodes[0];
-                        parent.replaceChild(conferma, form);
-
-                    } else {
-                        alert('Error Code: ' +  objXMLHttpRequest.status);
-                        alert('Error Message: ' + objXMLHttpRequest.statusText);
-                    }
-                }
-            }
-
-            //preparo uri ed eseguo richiesta in background
-            var uri = 'action/salvaMessaggio.php?name='+nomeInserito+'&surname='+cognomeInserito+'&email='+email+'&message='+messaggio;
-            objXMLHttpRequest.open('GET', uri,true);
-            objXMLHttpRequest.send(null);
-        }
-    }
-
-
-    window.onload = function settaSizeVideo() {
-        var altezza = document.getElementById('checkDimensioneImmagine').offsetHeight;
-        var larghezza = document.getElementById('checkDimensioneImmagine').offsetWidth;
-        console.log(altezza);
-        console.log(larghezza);
-    }
-
-
-</script>
-<script src="./js/jquery.min.js"></script>
-<script src="./js/bootstrap.bundle.min.js"></script>
-<script src="./js/animation.js"></script>
-<script src="./js/imagesloaded.js"></script>
-<script src="./js/templatemo-custom.js"></script>
-
-
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
