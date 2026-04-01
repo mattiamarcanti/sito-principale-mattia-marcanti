@@ -1,11 +1,5 @@
 # sito-principale-mattia-marcanti
 
-https://www.mattiamarcanti.it/
+<img width="1304" height="897" alt="image" src="https://github.com/user-attachments/assets/b10beb5c-68ab-408d-bbc9-461baeac6839" />
 
-Sul server i file nella directory .idea vanno esclusi
-
-Le pagine php sono dentro ogni cartella contesto o nella directory principlae e nella directory action
-
-Tutti i video pesanti sono sotto BigUpload (gestibili da FileManager)
-
-Il progetto Noce qui su Github è sprovvisto di cartella Upload per evitare di caricare troppa roba
+Dalla home è possibile accedere alla Web App (https://github.com/mattiamarcanti/mm-app) e all'Area Riservata (https://github.com/mattiamarcanti/mm-dashboard) previa autenticazione.
