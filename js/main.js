@@ -80,59 +80,23 @@ document.querySelectorAll('.reveal').forEach(el => {
 });
 
 /* ─── Carousel (Gallery) ──────────────────────── */
-const GALLERY = [
-  'source/image/gallery0.jpg',
-  'source/image/gallery1.jpg',
-  'source/image/gallery2.jpg',
-  'source/image/gallery3.jpg',
-  'source/image/gallery4.jpg',
-  'source/image/gallery5.jpg',
-  'source/image/gallery6.jpg',
-  'source/image/gallery7.jpg',
-  'source/image/gallery8.jpg',
-  'source/image/gallery9.jpg',
-  'source/image/gallery10.jpg',
-  'source/image/gallery11.jpg',
-  'source/image/galleryNew1.jpg',
-  'source/image/galleryNew2.jpg',
-  'source/image/galleryNew3.png',
-  'source/image/galleryNew4.jpg',
-  'source/image/galleryNew5.jpg',
-  'source/image/galleryNew6.jpg',
-  'source/image/galleryNew7.jpg',
-  'source/image/galleryNew8.jpg',
-  'source/image/galleryNew9.jpg',
-  'source/image/galleryNew10.jpg',
-  'source/image/galleryNew11.jpg',
-  'source/image/galleryNew12.jpg',
-  'source/image/galleryNew13.jpg',
-  'source/image/galleryNew14.jpg',
-  'source/image/galleryNew15.jpg',
-  'source/image/galleryNew16.jpg',
-  'source/image/galleryNew17.jpg',
-  'source/image/galleryNew18.jpg',
-  'source/image/galleryNew19.jpg',
-  'source/image/galleryNew20.jpg',
-  'source/image/galleryNew21.jpg',
-  'source/image/galleryNew22.jpg',
-  'source/image/galleryNew23.jpg',
-  'source/image/galleryNew24.jpg',
-];
+const GALLERY_JSON = 'source/image/gallery.json';
+const GALLERY_DIR  = 'source/image/';
+const PER_SLIDE    = 3;
 
-const PER_SLIDE = 3;
-const track     = document.getElementById('carouselTrack');
-const dotsEl    = document.getElementById('carouselDots');
+const track  = document.getElementById('carouselTrack');
+const dotsEl = document.getElementById('carouselDots');
 
 let cur = 0;
 let timer = null;
 let touchX = 0;
 
-function buildCarousel() {
-  if (!track) return 0;
+function buildCarousel(images) {
+  if (!track || !images.length) return 0;
 
   const slides = [];
-  for (let i = 0; i < GALLERY.length; i += PER_SLIDE) {
-    slides.push(GALLERY.slice(i, i + PER_SLIDE));
+  for (let i = 0; i < images.length; i += PER_SLIDE) {
+    slides.push(images.slice(i, i + PER_SLIDE));
   }
 
   track.innerHTML = slides.map((slide, si) =>
@@ -173,8 +137,7 @@ function restartTimer(total) {
   timer = setInterval(() => goTo(cur + 1), 5000);
 }
 
-const totalSlides = buildCarousel();
-if (totalSlides > 0) {
+function initCarouselEvents(totalSlides) {
   restartTimer(totalSlides);
 
   document.getElementById('carouselPrev')?.addEventListener('click', () => goTo(cur - 1));
@@ -191,6 +154,15 @@ if (totalSlides > 0) {
     if (Math.abs(diff) > 50) goTo(cur + (diff > 0 ? 1 : -1));
   });
 }
+
+fetch(GALLERY_JSON)
+  .then(r => r.json())
+  .then(names => {
+    const images = names.map(name => GALLERY_DIR + name);
+    const totalSlides = buildCarousel(images);
+    if (totalSlides > 0) initCarouselEvents(totalSlides);
+  })
+  .catch(err => console.error('Gallery: impossibile caricare gallery.json', err));
 
 /* ─── Contact Form ────────────────────────────── */
 document.getElementById('contactForm')?.addEventListener('submit', async e => {
