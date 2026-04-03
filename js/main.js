@@ -52,8 +52,17 @@ navLinks?.querySelectorAll('a, button:not(#navClose)').forEach(el => {
 });
 
 /* ─── CV Download ─────────────────────────────── */
+const cvByLang = {
+  it: 'source/pdf/CVMattiaMarcanti.pdf',
+  en: 'source/pdf/CVMattiaMarcantiEN.pdf',
+  fr: 'source/pdf/CVMattiaMarcantiFR.pdf',
+  es: 'source/pdf/CVMattiaMarcantiES.pdf',
+  zh: 'source/pdf/CVMattiaMarcantiCH.pdf',
+  ar: 'source/pdf/CVMattiaMarcantiAR.pdf',
+};
 document.getElementById('downloadCV')?.addEventListener('click', () => {
-  window.open('source/pdf/CVMattiaMarcanti.pdf', '_blank');
+  const lang = localStorage.getItem('mm-lang') || 'it';
+  window.open(cvByLang[lang] || cvByLang.it, '_blank');
 });
 
 /* ─── PDF helper ──────────────────────────────── */

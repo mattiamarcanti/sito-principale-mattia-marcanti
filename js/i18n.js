@@ -390,6 +390,93 @@ const translations = {
     'footer.copy': '© 2024 Mattia Marcanti. 版权所有。',
     'aria.hamburger': '打开菜单', 'aria.backtop': '返回顶部',
     'aria.prev': '上一张', 'aria.next': '下一张', 'aria.downloadcv': '下载简历',
+  },
+
+  /* ──────────── العربية ──────────── */
+  ar: {
+    /* Nav */
+    'nav.about': 'عني', 'nav.experience': 'الخبرة', 'nav.projects': 'المشاريع',
+    'nav.gallery': 'المعرض', 'nav.contact': 'اتصل بي',
+    'nav.webapp': 'تطبيق ويب', 'nav.reserved': 'منطقة خاصة', 'nav.curriculum': 'السيرة الذاتية',
+    /* Hero */
+    'hero.badge': 'متاح لفرص جديدة',
+    'hero.subtitle': 'مطوّر برمجيات <span class="sep">·</span> مهندس حاسوب',
+    'hero.discover': 'اكتشف المزيد',
+    /* Section titles */
+    'section.about.title': 'من أنا',
+    'section.exp.title': 'الخبرة',
+    'section.proj.title': 'المشاريع',
+    'section.gallery.title': 'المعرض',
+    'section.contact.title': 'تواصل معي',
+    /* About */
+    'about.tag': 'من أنا',
+    'about.subtitle': 'مهندس حاسوب شغوف بالبرمجة والتصميم',
+    'bento.formation.title': 'التعليم',
+    'bento.formation.text': 'تخرّجت في <strong>هندسة الحاسوب</strong> من جامعة بولونيا (Unibo)، مع التركيز على أنظمة البرمجيات المعقدة وتطوير الويب والذكاء الاصطناعي.',
+    'bento.formation.tag2': 'درجة البكالوريوس',
+    'bento.itknowledge.title': 'المعرفة التقنية',
+    'bento.graphic.title': 'الرسوم والتصميم',
+    'bento.hobby.title': 'الهوايات والاهتمامات',
+    'hobby.calcio': 'كرة القدم', 'hobby.basket': 'كرة السلة', 'hobby.musica': 'الموسيقى',
+    'hobby.danza': 'الرقص', 'hobby.viaggiare': 'السفر', 'hobby.standup': 'ستاند أب',
+    'hobby.sci': 'التزلج', 'hobby.tecnologia': 'التكنولوجيا', 'hobby.lingue': 'اللغات',
+    /* Experience */
+    'exp.tag': 'المسيرة', 'exp.subtitle': 'مسيرتي الأكاديمية والمهنية',
+    'tl.1999.badge': 'البداية', 'tl.1999.date': '23 سبتمبر 1999',
+    'tl.1999.title': 'الميلاد', 'tl.1999.text': 'وُلدت في 23 سبتمبر 1999.',
+    'tl.2018d.badge': 'دبلوم', 'tl.2018d.date': 'يونيو 2018',
+    'tl.2018d.title': 'دبلوم معهد IIS Belluzzi',
+    'tl.2018d.text': 'دبلوم في علوم الحاسوب والاتصالات من معهد IIS Belluzzi في بولونيا.',
+    'tl.2018c.badge': 'عمل', 'tl.2018c.title': 'مصمم ويب — Cineca',
+    'tl.2018c.text': 'أول تجربة عمل كمصمم ويب في Cineca، أحد أكبر مراكز الحوسبة في أوروبا.',
+    'tl.2021.badge': 'شهادة', 'tl.2021.date': 'ديسمبر 2021',
+    'tl.2021.title': 'بكالوريوس هندسة الحاسوب',
+    'tl.2021.text': 'تخرّجت في هندسة الحاسوب من جامعة بولونيا. أطروحة حول تصميم رقصات الروبوت والتقييم الفني التلقائي.',
+    'tl.2022.badge': 'حالياً', 'tl.2022.date': 'مايو 2022 — الحاضر',
+    'tl.2022.title': 'مطوّر برمجيات — مجموعة Finmatica',
+    'tl.2022.text': 'تطوير برمجيات ERP للرعاية الصحية والإدارة العامة. متخصص في Java وSpring Boot وZK Framework وiDempiere.',
+    /* File buttons */
+    'file.attestato.inglese': 'شهادة اللغة الإنجليزية الثانوية',
+    'file.diploma.medie': 'شهادة المرحلة المتوسطة',
+    'file.sicurezza.alto': 'شهادة السلامة عالية المخاطر',
+    'file.sicurezza.manpower': 'شهادة سلامة Manpower',
+    'file.attestato.laurea': 'شهادة التخرج',
+    'file.inglese.b2': 'الإنجليزية B2',
+    'file.java.academy': 'أكاديمية Java',
+    'file.sicurezza.mod1': 'السلامة وحدة 1',
+    'file.sicurezza.mod2': 'السلامة وحدة 2',
+    'file.sicurezza.2022': 'السلامة 2022',
+    /* Projects */
+    'proj.tag': 'أعمال', 'proj.subtitle': 'بعض أبرز المشاريع في مسيرتي',
+    'proj.tesi.date': 'ديسمبر 2021', 'proj.tesi.cat': 'أطروحة بكالوريوس',
+    'proj.tesi.title': 'تصميم رقصات الروبوت والتقييمات الفنية',
+    'proj.tesi.desc': 'أطروحة بكالوريوس حول تصميم رقصات الروبوت والتقييم الفني التلقائي باستخدام خوارزميات التعلم الآلي.',
+    'proj.depag.date': 'مايو 2022', 'proj.depag.cat': 'مؤسسي',
+    'proj.depag.desc': 'نظام الدفع الإلكتروني PagoPA للرعاية الصحية والإدارة العامة. حل مؤسسي للإدارة الرقمية للمدفوعات العامة.',
+    'proj.erp.date': 'فبراير 2024', 'proj.erp.cat': 'مؤسسي',
+    'proj.erp.desc': 'نظام تخطيط موارد المؤسسات الشامل للشركات الصحية. نظام متكامل لإدارة الموارد والعمليات والبيانات في القطاع الصحي.',
+    'proj.tesina.cat': 'مدرسي', 'proj.tesina.tech': 'المراسلة',
+    'proj.tesina.desc': 'مشروع مدرسي يركّز على تطوير روبوت محادثة وأنظمة المراسلة الفورية.',
+    /* Project links */
+    'link.video': 'فيديو', 'link.download': 'تحميل', 'link.live': 'الموقع المباشر', 'link.docs': 'المستندات',
+    /* Gallery */
+    'gallery.tag': 'لحظات', 'gallery.subtitle': 'بعض لحظات من حياتي',
+    /* Contact */
+    'contact.tag': 'التواصل', 'contact.subtitle': 'هل تريد التعاون أو مجرد الدردشة؟',
+    'contact.info.title': 'لنتحدث!',
+    'contact.info.text': 'أنا دائماً منفتح على الفرص والتعاونات والمشاريع المثيرة للاهتمام. لا تتردد في التواصل معي.',
+    'contact.phone.label': 'الهاتف', 'contact.city.label': 'المدينة',
+    'contact.city.value': 'بولونيا (BO) 40131، إيطاليا',
+    'form.nome': 'الاسم', 'form.cognome': 'اللقب',
+    'form.message': 'الرسالة', 'form.submit': 'إرسال الرسالة',
+    'form.sending': 'جارٍ الإرسال…',
+    'form.success.title': 'تم إرسال الرسالة!',
+    'form.success.text': 'شكراً لرسالتك، سأرد عليك في أقرب وقت.',
+    /* Footer */
+    'footer.copy': '© 2024 Mattia Marcanti. جميع الحقوق محفوظة.',
+    /* Aria */
+    'aria.hamburger': 'فتح القائمة', 'aria.backtop': 'العودة للأعلى',
+    'aria.prev': 'السابق', 'aria.next': 'التالي', 'aria.downloadcv': 'تحميل السيرة الذاتية',
   }
 };
 
@@ -402,6 +489,7 @@ const langMeta = {
   es: { flagSrc: 'https://flagcdn.com/20x15/es.png', code: 'ES', label: 'Español' },
   fr: { flagSrc: 'https://flagcdn.com/20x15/fr.png', code: 'FR', label: 'Français' },
   zh: { flagSrc: 'https://flagcdn.com/20x15/cn.png', code: 'ZH', label: '中文' },
+  ar: { flagSrc: 'https://flagcdn.com/20x15/sa.png', code: 'AR', label: 'العربية' },
 };
 
 /* ═══════════════════════════════════════════════
@@ -431,6 +519,7 @@ function applyLanguage(lang) {
 
   /* — <html> lang attribute — */
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
   /* — update switcher button UI — */
   const meta = langMeta[lang];

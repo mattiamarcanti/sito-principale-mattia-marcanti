@@ -1256,3 +1256,14 @@ a.contact-item:hover {
   .stat-div { display: none; }
   .hero-stats { flex-wrap: wrap; gap: 20px; }
 }
+
+/* ═══════════════════════════════════════════════
+   RTL SUPPORT (Arabic)
+   ═══════════════════════════════════════════════ */
+[dir="rtl"] .lang-dropdown { right: auto; left: 0; }
+[dir="rtl"] .lang-option { text-align: right; }
+[dir="rtl"] .nav-links { flex-direction: row-reverse; }
+[dir="rtl"] .tl-item .tl-year { text-align: left; }
+[dir="rtl"] .tl-right .tl-year { text-align: right; }
+[dir="rtl"] .carousel-prev { left: auto; right: 16px; }
+[dir="rtl"] .carousel-next { right: auto; left: 16px; }
