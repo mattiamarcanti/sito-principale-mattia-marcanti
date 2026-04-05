@@ -86,7 +86,7 @@ const translations = {
     'form.success.title': 'Messaggio inviato!',
     'form.success.text': 'Grazie per avermi scritto, ti rispondo al più presto.',
     /* Footer */
-    'footer.copy': '© 2024 Mattia Marcanti. Tutti i diritti riservati.',
+    'footer.copy': '© %%YEAR%% Mattia Marcanti. Tutti i diritti riservati.',
     /* Aria */
     'aria.hamburger': 'Apri menu', 'aria.backtop': 'Torna in cima',
     'aria.prev': 'Precedente', 'aria.next': 'Successivo', 'aria.downloadcv': 'Scarica CV',
@@ -162,7 +162,7 @@ const translations = {
     'form.sending': 'Sending…',
     'form.success.title': 'Message sent!',
     'form.success.text': "Thanks for writing, I'll reply as soon as possible.",
-    'footer.copy': '© 2024 Mattia Marcanti. All Rights Reserved.',
+    'footer.copy': '© %%YEAR%% Mattia Marcanti. All Rights Reserved.',
     'aria.hamburger': 'Open menu', 'aria.backtop': 'Back to top',
     'aria.prev': 'Previous', 'aria.next': 'Next', 'aria.downloadcv': 'Download CV',
   },
@@ -237,7 +237,7 @@ const translations = {
     'form.sending': 'Enviando…',
     'form.success.title': '¡Mensaje enviado!',
     'form.success.text': 'Gracias por escribirme, te respondo lo antes posible.',
-    'footer.copy': '© 2024 Mattia Marcanti. Todos los derechos reservados.',
+    'footer.copy': '© %%YEAR%% Mattia Marcanti. Todos los derechos reservados.',
     'aria.hamburger': 'Abrir menú', 'aria.backtop': 'Volver arriba',
     'aria.prev': 'Anterior', 'aria.next': 'Siguiente', 'aria.downloadcv': 'Descargar CV',
   },
@@ -312,7 +312,7 @@ const translations = {
     'form.sending': 'Envoi en cours…',
     'form.success.title': 'Message envoyé !',
     'form.success.text': "Merci de m'avoir écrit, je vous réponds dès que possible.",
-    'footer.copy': '© 2024 Mattia Marcanti. Tous droits réservés.',
+    'footer.copy': '© %%YEAR%% Mattia Marcanti. Tous droits réservés.',
     'aria.hamburger': 'Ouvrir le menu', 'aria.backtop': 'Retour en haut',
     'aria.prev': 'Précédent', 'aria.next': 'Suivant', 'aria.downloadcv': 'Télécharger CV',
   },
@@ -387,7 +387,7 @@ const translations = {
     'form.sending': '发送中…',
     'form.success.title': '消息已发送！',
     'form.success.text': '感谢您的留言，我会尽快回复。',
-    'footer.copy': '© 2024 Mattia Marcanti. 版权所有。',
+    'footer.copy': '© %%YEAR%% Mattia Marcanti. 版权所有。',
     'aria.hamburger': '打开菜单', 'aria.backtop': '返回顶部',
     'aria.prev': '上一张', 'aria.next': '下一张', 'aria.downloadcv': '下载简历',
   },
@@ -473,7 +473,7 @@ const translations = {
     'form.success.title': 'تم إرسال الرسالة!',
     'form.success.text': 'شكراً لرسالتك، سأرد عليك في أقرب وقت.',
     /* Footer */
-    'footer.copy': '© 2024 Mattia Marcanti. جميع الحقوق محفوظة.',
+    'footer.copy': '© %%YEAR%% Mattia Marcanti. جميع الحقوق محفوظة.',
     /* Aria */
     'aria.hamburger': 'فتح القائمة', 'aria.backtop': 'العودة للأعلى',
     'aria.prev': 'السابق', 'aria.next': 'التالي', 'aria.downloadcv': 'تحميل السيرة الذاتية',

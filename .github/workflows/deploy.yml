@@ -18,7 +18,7 @@ jobs:
         run: |
           VERSION=$(git describe --tags --always)
           YEAR=$(git log -1 --format=%cd --date=format:%Y)
-          find . -type f \( -name '*.html' -o -name '*.php' \) \
+          find . -type f \( -name '*.html' -o -name '*.php' -o -name '*.js' \) \
             -exec sed -i "s/%%VERSION%%/$VERSION/g; s/%%YEAR%%/$YEAR/g" {} +
 
       - name: Deploy to Aruba hosting mattiamarcanti.it via FTP
