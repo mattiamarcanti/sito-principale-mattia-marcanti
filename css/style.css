@@ -1101,6 +1101,11 @@ a.contact-item:hover {
   transition: var(--tr);
 }
 .footer-links a:hover { color: var(--acc); }
+.footer-version {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  opacity: 0.7;
+}
 
 /* ═══════════════════════════════════════════════
    BACK TO TOP
