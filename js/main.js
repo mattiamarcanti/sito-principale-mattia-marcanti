@@ -172,11 +172,33 @@ function initCarouselEvents(totalSlides) {
   wrap?.addEventListener('mouseenter', () => clearInterval(timer));
   wrap?.addEventListener('mouseleave', () => restartTimer(totalSlides));
 
-  // Touch swipe
-  wrap?.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
-  wrap?.addEventListener('touchend',   e => {
-    const diff = touchX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) goTo(cur + (diff > 0 ? 1 : -1));
+  // Touch swipe with drag feedback
+  let dragging = false;
+  let dragX = 0;
+
+  wrap?.addEventListener('touchstart', e => {
+    touchX = e.touches[0].clientX;
+    dragX = 0;
+    dragging = true;
+    track.style.transition = 'none';
+  }, { passive: true });
+
+  wrap?.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    dragX = e.touches[0].clientX - touchX;
+    const base = -cur * track.offsetWidth;
+    track.style.transform = `translateX(${base + dragX}px)`;
+  }, { passive: true });
+
+  wrap?.addEventListener('touchend', () => {
+    if (!dragging) return;
+    dragging = false;
+    track.style.transition = '';
+    if (Math.abs(dragX) > 50) {
+      goTo(cur + (dragX < 0 ? 1 : -1));
+    } else {
+      render(totalSlides);
+    }
   });
 }
 
