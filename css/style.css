@@ -896,18 +896,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .carousel-slide {
   min-width: 100%;
-  display: grid; grid-template-columns: repeat(3,1fr);
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 220px);
+  grid-auto-flow: dense;
+  gap: 6px;
   padding: 4px;
 }
 
-.carousel-img {
-  aspect-ratio: 4/3;
-  object-fit: cover;
+.carousel-slide .mosaic-item {
+  overflow: hidden;
   border-radius: var(--r);
-  transition: transform .3s ease;
+  position: relative;
 }
-.carousel-img:hover { transform: scale(1.02); }
+
+.carousel-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.carousel-img:hover { transform: scale(1.05); }
 
 .carousel-btn {
   position: absolute; top: 50%; transform: translateY(-50%);
@@ -941,6 +950,39 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 24px;
   background: var(--acc); border-color: var(--acc);
 }
+
+/* ── Lightbox ──────────────────────────────── */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.92);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s ease;
+  backdrop-filter: blur(8px);
+}
+.lightbox.active { opacity: 1; pointer-events: auto; }
+
+.lightbox-img {
+  max-width: 90vw; max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--r);
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+}
+
+.lightbox-close {
+  position: absolute; top: 20px; right: 24px;
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 50%;
+  color: #fff; font-size: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: var(--tr);
+  backdrop-filter: blur(10px);
+}
+.lightbox-close:hover { background: rgba(255,255,255,.25); }
 
 /* ═══════════════════════════════════════════════
    CONTACT
@@ -1160,6 +1202,8 @@ a.contact-item:hover {
   .tl-right .tl-card { grid-column: 2; order: 2; }
 
   .contact-grid { grid-template-columns: 1fr; }
+  .carousel-slide { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 180px); }
+  .carousel-slide .mosaic-item { grid-area: auto !important; }
 }
 
 /* ═══════════════════════════════════════════════
@@ -1246,7 +1290,8 @@ a.contact-item:hover {
 
   .projects-grid { grid-template-columns: 1fr; }
 
-  .carousel-slide { grid-template-columns: 1fr; }
+  .carousel-slide { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 140px); }
+  .carousel-slide .mosaic-item { grid-area: auto !important; }
 
   .form-row { grid-template-columns: 1fr; }
 

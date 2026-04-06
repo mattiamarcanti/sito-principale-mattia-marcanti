@@ -14,6 +14,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Generate gallery index
+        run: |
+          ls gallery/ | grep -iE '\.(jpg|jpeg|png|gif|webp)$' | sort | \
+            jq -R -s 'split("\n") | map(select(length > 0))' > gallery/gallery.json
+
       - name: Stamp version
         run: |
           VERSION=$(git describe --tags --always)

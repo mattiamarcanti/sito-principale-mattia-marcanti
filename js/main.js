@@ -89,9 +89,22 @@ document.querySelectorAll('.reveal').forEach(el => {
 });
 
 /* ─── Carousel (Gallery) ──────────────────────── */
-const GALLERY_JSON = 'source/image/gallery.json';
-const GALLERY_DIR  = 'source/image/';
-const PER_SLIDE    = 3;
+const GALLERY_DIR = 'gallery/';
+const GALLERY_JSON = 'gallery/gallery.json';
+
+const PER_SLIDE = 7;
+
+/* Mosaic layout patterns — each is an array of 8 grid-area strings
+   using row-start / col-start / row-end / col-end on a 2-row × 6-col grid.
+   All 12 column-slots (6 per row) must be filled exactly. */
+const MOSAIC_PATTERNS = [
+  // Pattern A: row1=[2,3,1] row2=[2,2,1,1]
+  ['1/1/2/3','1/3/2/6','1/6/2/7', '2/1/3/3','2/3/3/5','2/5/3/6','2/6/3/7'],
+  // Pattern B: row1=[1,3,2] row2=[2,1,1,2]
+  ['1/1/2/2','1/2/2/5','1/5/2/7', '2/1/3/3','2/3/3/4','2/4/3/5','2/5/3/7'],
+  // Pattern C: row1=[3,1,2] row2=[1,2,1,2]
+  ['1/1/2/4','1/4/2/5','1/5/2/7', '2/1/3/2','2/2/3/4','2/4/3/5','2/5/3/7']
+];
 
 const track  = document.getElementById('carouselTrack');
 const dotsEl = document.getElementById('carouselDots');
@@ -108,13 +121,16 @@ function buildCarousel(images) {
     slides.push(images.slice(i, i + PER_SLIDE));
   }
 
-  track.innerHTML = slides.map((slide, si) =>
-    `<div class="carousel-slide" aria-label="Slide ${si + 1}">
-      ${slide.map(src =>
-        `<img src="${src}" alt="Foto gallery" class="carousel-img" loading="lazy">`
-      ).join('')}
-    </div>`
-  ).join('');
+  track.innerHTML = slides.map((slide, si) => {
+    const pattern = MOSAIC_PATTERNS[si % MOSAIC_PATTERNS.length];
+    const items = slide.map((src, idx) => {
+      const area = pattern[idx] || '1/1/2/2';
+      return `<div class="mosaic-item" style="grid-area:${area}">
+        <img src="${src}" alt="Foto gallery" class="carousel-img" loading="lazy">
+      </div>`;
+    }).join('');
+    return `<div class="carousel-slide" aria-label="Slide ${si + 1}">${items}</div>`;
+  }).join('');
 
   if (dotsEl) {
     dotsEl.innerHTML = slides.map((_, i) =>
@@ -143,7 +159,7 @@ function goTo(idx) {
 
 function restartTimer(total) {
   clearInterval(timer);
-  timer = setInterval(() => goTo(cur + 1), 5000);
+  timer = setInterval(() => goTo(cur + 1), 6000);
 }
 
 function initCarouselEvents(totalSlides) {
@@ -164,12 +180,48 @@ function initCarouselEvents(totalSlides) {
   });
 }
 
+/* ─── Lightbox ───────────────────────────────────── */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+
+function openLightbox(src) {
+  if (!lightbox) return;
+  lightboxImg.src = src;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  clearInterval(timer);
+}
+
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove('active');
+  lightboxImg.src = '';
+  document.body.style.overflow = '';
+  restartTimer(track?.children.length || 0);
+}
+
+lightbox?.addEventListener('click', e => {
+  if (e.target === lightboxImg) return;
+  closeLightbox();
+});
+document.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+/* ─── Init Gallery ───────────────────────────────── */
 fetch(GALLERY_JSON)
   .then(r => r.json())
   .then(names => {
     const images = names.map(name => GALLERY_DIR + name);
     const totalSlides = buildCarousel(images);
     if (totalSlides > 0) initCarouselEvents(totalSlides);
+
+    // Attach lightbox click to all gallery images
+    track?.querySelectorAll('.carousel-img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => openLightbox(img.src));
+    });
   })
   .catch(err => console.error('Gallery: impossibile caricare gallery.json', err));
 
